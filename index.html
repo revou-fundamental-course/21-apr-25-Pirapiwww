@@ -12,19 +12,24 @@
         
     </head>
     <body>
-        <div id="content">
+        <main id="content">
             <div class="container shadow">
+                <!-- TITLE -->
                 <h1 class="cantarell">
                     Temperature Conversion (Celsius to Fahrenheit)
-                </h1>   
+                </h1>
+
+                <!-- NOTE -->
                 <hr class="title">    
                 Note : 
                 <p>
                     Masukkan suhu derajat Celcius (°C) ke kotak dibawah, lalu klik tombol konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (°F).
                 </p>
                 <hr>
+                
+                <!-- CELCIUS TO FAHRENHEIT -->
                 <div class="container">
-                    <div class="row">
+                    <span class="row">
                         <div class="col-md-6">
                             <label for="celsius" class="pt">Celsius (°C):</label>
                             <textarea id="celsius" rows="2"></textarea>
@@ -32,23 +37,27 @@
                         <div class="col-md-6">
                             <label for="fahrenheit" class="pt">Fahrenheit (°F):</label>
                             <textarea id="fahrenheit" rows="2" readonly></textarea>
-    
                         </div>
-                    </div>
+                    </span>
                 </div>
 
-                <div class="buttons">
+                <!-- BUTTONS -->
+                <span class="buttons">
                     <button class="btn-success" onclick="convert()">Konversi</button>
                     <button class="btn-danger" onclick="reset()">Reset</button>
                     <button class="btn-primary" onclick="reverse()">Reverse</button>
-                </div>
+                </span>
                 
+                <!-- CACULATION -->
                 <hr>
                 <label for="calculation" class="pt">Cara Kalkulasi:</label>
                 <textarea id="calculation" rows="3" readonly></textarea>
 
+                <!-- CHANGE PAGE -->
                 <a onclick="reverse()">Fahrenheit ke Celsius</a>
                 <hr>
+
+                <!-- INFO -->
                 <div class="center">
                     <h2>Cara Konversi Dari Celsius (°C) ke Fahrenheit (°F)</h2>
                     <p>
@@ -63,7 +72,8 @@
                         <strong><i>S</i><sub>(°F)</sub> = (<i>S</i><sub>(°C)</sub> × 1.8) + 32</strong>
                     </p>
                 </div>
+                
             </div>
-        </div>
+        </main>
     </body>
 </html>

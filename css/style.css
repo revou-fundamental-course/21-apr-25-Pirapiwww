@@ -5,10 +5,13 @@ body {
     text-align: justify;
     background-color: var(--cream);
 }
+
+/* FONT */
 .cantarell{
     font-family: "Cantarell", sans-serif;
 }
 
+/* COLORS */
 :root {
     --black: #11100F;
     --light-green: #E3F0AF;
@@ -18,11 +21,7 @@ body {
     --cream: #FBF6E9;
 }
 
-h1{
-    text-align: center;
-    color: var(--green);
-}
-
+/* FONT FORMAT */
 .title {
     align-items: center;
     width: 100%;
@@ -30,6 +29,24 @@ h1{
     background-color: var(--green);
     border: none;
 }
+h1{
+    text-align: center;
+    color: var(--green);
+}
+h2 {
+    margin-top: 30px;
+    font-size: 20px;
+}
+label {
+    font-weight: bold;
+    display: block;
+    padding-bottom: 10px;
+}
+.center{
+    text-align: center;
+}
+
+/* CONTAINER AND FORM FORMAT */
 .row {
     display: flex;
     justify-content: center;
@@ -47,10 +64,9 @@ h1{
     background: white;
     padding: 20px;
 }
-
 .shadow{
     border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
 }
 textarea {
     width: 100%;
@@ -59,19 +75,12 @@ textarea {
     resize: none;
 }
 
-label {
-    font-weight: bold;
-    display: block;
-    padding-bottom: 10px;
+/* PADDING CUSTOM */
+.pt {
+    padding-top: 15px;
 }
 
-.buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-    justify-content: center;
-}
-
+/* BUTTONS COLOR */
 .btn-danger{
     background-color: red;
 }
@@ -79,7 +88,6 @@ label {
     background-color: red;
     opacity: 0.7;
 }
-
 .btn-primary{
     background-color: blue;
 }
@@ -87,7 +95,6 @@ label {
     background-color: blue;
     opacity: 0.7;
 }
-
 .btn-success{
     background-color: green;
 }
@@ -96,6 +103,7 @@ label {
     opacity: 0.7;
 }
 
+/* BUTTON FORMAT */
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -104,7 +112,14 @@ button {
     border: none;
     border-radius: 5px;
 }
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+}
 
+/* LINK HREF A */
 a {
     display: inline-block;
     margin-top: 15px;
@@ -113,19 +128,7 @@ a {
     cursor: pointer;
 }
 
-h2 {
-    margin-top: 30px;
-    font-size: 20px;
-}
-
-
-.pt {
-    padding-top: 15px;
-}
-.center{
-    text-align: center;
-}
-
+/* RESPONSIVE WEB */
 @media only screen and (max-width: 767px) {
     h1{
         font-size: 30px;

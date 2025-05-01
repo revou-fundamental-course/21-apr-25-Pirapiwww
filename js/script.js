@@ -1,38 +1,56 @@
+// SET DEFAULT PAGE
 localStorage.setItem("page", "CeFaren"); // Set default page to CeFaren
 
+// CONVERT FUNCTION
 function convert() {
     const page = localStorage.getItem("page");
+
+    // CHECK IF PAGE IS "CeFaren"
     if (page === 'CeFaren') {
         const celsius = parseFloat(document.getElementById('celsius').value);
+
+        // CHECK IF INPUT IS NaN
         if (isNaN(celsius)) {
             alert('Masukkan angka yang valid!');
             return;
         }
+
+        // CONVERT CELSIUS TO FAHRENHEIT
         const fahrenheit = (celsius * 9 / 5) + 32;
         document.getElementById('fahrenheit').value = fahrenheit.toFixed(2);
         document.getElementById('calculation').value = `(${celsius}°C × (9/5)) + 32 = ${fahrenheit.toFixed(2)}°F`;
+    
+    // CHECK IF PAGE IS "FarenCe"
     } else if (page === 'FarenCe') {
         const fahrenheit = parseFloat(document.getElementById('fahrenheit').value);
+        
+        // CHECK IF INPUT IS NaN
         if (isNaN(fahrenheit)) {
             alert('Masukkan angka yang valid!');
             return;
         }
+
+        // CONVERT FAHRENHEIT TO CELSIUS
         const celsius = (fahrenheit - 32) * 5 / 9;
         document.getElementById('celsius').value = celsius.toFixed(2);
         document.getElementById('calculation').value = `(${fahrenheit}°F - 32) × (5/9) = ${celsius.toFixed(2)}°C`;
     } 
 }
 
+//RESET FUNCTION
 function reset() {
     document.getElementById('celsius').value = '';
     document.getElementById('fahrenheit').value = '';
     document.getElementById('calculation').value = '';
 }
 
+//REVERSE FUNCTION
 function reverse() {
     const page = localStorage.getItem("page");
 
+    // IF PAGE IS "FarenCe"
     if (page === 'FarenCe') {
+        // INNER HTML FOR "FarenCe" (FAHRENHEIT TO CELSIUS)
         document.getElementById('content').innerHTML = `
         <div class="container shadow">
             <h1 class="cantarell">
@@ -88,8 +106,12 @@ function reverse() {
             </div>
         </div>
         `;
+        // SET PAGE TO "CeFaren"
         localStorage.setItem("page", "CeFaren");
+
+    // IF PAGE IS "CeFaren"
     } else if (page === 'CeFaren') {
+        // INNER HTML FOR "CeFaren" (CELCIUS TO FAHRENHEIT)
         document.getElementById('content').innerHTML = `
         <div class="container shadow">
             <h1 class="cantarell">
@@ -144,6 +166,7 @@ function reverse() {
             </div>
         </div>
         `;
+        // SET PAGE TO "FarenCe"
         localStorage.setItem("page", "FarenCe");
     }
 }
